@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
+import * as Papa from 'papaparse'
+import ParentSize from '@visx/responsive/lib/components/ParentSize';
+
+import Model from './Model';
+import './App.scss';
+
 
 function App() {
+  // const rawData : string = localStorage.getItem('police_data') ? localStorage.getItem('police_data') as string : '[]';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ParentSize>{({ width, height }) => <Model width={width} height={height} />}</ParentSize>
     </div>
   );
 }

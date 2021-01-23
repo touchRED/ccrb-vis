@@ -37,8 +37,8 @@ export default function Model({
   animate = true
 }: PieProps) {
   const [selectedRank, setSelectedRank] = useState<string | null>(null);
-  const [rawData, setRawData] = useState([] as any[]);
-  const [substantiatedData, setSubstantiatedData] = useState([] as any[]);
+  const [, setRawData] = useState([] as any[]);
+  const [, setSubstantiatedData] = useState([] as any[]);
   const [frequencyData, setFrequencyData] = useState([] as Allegation[]);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -92,7 +92,7 @@ export default function Model({
       	}
       });
     }
-  }, [])
+  }, [isLoaded])
 
   if (width < 10) return null;
 

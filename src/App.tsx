@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
-import * as Papa from 'papaparse'
 import ParentSize from '@visx/responsive/lib/components/ParentSize';
 
 import Model from './Model';
